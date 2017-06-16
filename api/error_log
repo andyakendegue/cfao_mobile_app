@@ -1,0 +1,25 @@
+[01-Dec-2016 08:20:08 America/Chicago] PHP Warning:  mysqli_real_connect(): (HY000/1045): Access denied for user 'ilink'@'localhost' (using password: YES) in /home/ilinkgabon/public_html/api/api.php on line 97
+[01-Dec-2016 08:20:08 America/Chicago] PHP Fatal error:  Uncaught exception 'Exception' with message 'Connect failed. Access denied for user 'ilink'@'localhost' (using password: YES)' in /home/ilinkgabon/public_html/api/api.php:99
+Stack trace:
+#0 /home/ilinkgabon/public_html/api/api.php(1834): MySQL->connect('localhost', 'ilink', 'ilinkgabon2016G...', 'ilinkgabon_rest...', NULL, NULL, 'utf8')
+#1 /home/ilinkgabon/public_html/api/api.php(2260): PHP_CRUD_API->__construct(Array)
+#2 {main}
+  thrown in /home/ilinkgabon/public_html/api/api.php on line 99
+[01-Dec-2016 08:23:04 America/Chicago] PHP Warning:  mysqli_real_connect(): (HY000/1044): Access denied for user 'ilink'@'localhost' to database 'ilinkgabon_rest_api' in /home/ilinkgabon/public_html/api/api.php on line 97
+[01-Dec-2016 08:23:04 America/Chicago] PHP Fatal error:  Uncaught exception 'Exception' with message 'Connect failed. Access denied for user 'ilink'@'localhost' to database 'ilinkgabon_rest_api'' in /home/ilinkgabon/public_html/api/api.php:99
+Stack trace:
+#0 /home/ilinkgabon/public_html/api/api.php(1834): MySQL->connect('localhost', 'ilink', 'ilink2016GA', 'ilinkgabon_rest...', NULL, NULL, 'utf8')
+#1 /home/ilinkgabon/public_html/api/api.php(2260): PHP_CRUD_API->__construct(Array)
+#2 {main}
+  thrown in /home/ilinkgabon/public_html/api/api.php on line 99
+[16-Dec-2016 23:39:49 America/Chicago] PHP Fatal error:  Out of memory (allocated 262144) (tried to allocate 12288 bytes) in /home/ilinkgabon/public_html/api/api.php on line 129
+[16-Dec-2016 23:39:49 America/Chicago] PHP Fatal error:  Out of memory (allocated 524288) (tried to allocate 49152 bytes) in /home/ilinkgabon/public_html/api/api.php on line 1164
+[16-Dec-2016 23:39:49 America/Chicago] PHP Fatal error:  Out of memory (allocated 262144) (tried to allocate 12288 bytes) in /home/ilinkgabon/public_html/api/api.php on line 129
+[16-Dec-2016 23:39:49 America/Chicago] PHP Fatal error:  Out of memory (allocated 524288) (tried to allocate 49152 bytes) in /home/ilinkgabon/public_html/api/api.php on line 1164
+[16-Dec-2016 23:39:50 America/Chicago] PHP Fatal error:  Out of memory (allocated 262144) (tried to allocate 12288 bytes) in /home/ilinkgabon/public_html/api/api.php on line 129
+[16-Dec-2016 23:39:50 America/Chicago] PHP Fatal error:  Out of memory (allocated 262144) (tried to allocate 12288 bytes) in /home/ilinkgabon/public_html/api/api.php on line 129
+[16-Dec-2016 23:39:53 America/Chicago] PHP Fatal error:  Out of memory (allocated 524288) (tried to allocate 49152 bytes) in /home/ilinkgabon/public_html/api/api.php on line 1164
+[16-Dec-2016 23:39:56 America/Chicago] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/local/lib/php/extensions/no-debug-non-zts-20131226/pdo_sqlite.so' - /usr/local/lib/php/extensions/no-debug-non-zts-20131226/pdo_sqlite.so: failed to map segment from shared object: Cannot allocate memory in Unknown on line 0
+[16-Dec-2016 23:39:56 America/Chicago] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/local/lib/php/extensions/no-debug-non-zts-20131226/pdo_mysql.so' - /usr/local/lib/php/extensions/no-debug-non-zts-20131226/pdo_mysql.so: failed to map segment from shared object: Cannot allocate memory in Unknown on line 0
+[16-Dec-2016 23:39:56 America/Chicago] PHP Fatal error:  Out of memory (allocated 262144) (tried to allocate 12288 bytes) in /home/ilinkgabon/public_html/api/api.php on line 129
+[16-Dec-2016 23:39:56 America/Chicago] PHP Fatal error:  Out of memory (allocated 524288) (tried to allocate 49152 bytes) in /home/ilinkgabon/public_html/api/api.php on line 1164

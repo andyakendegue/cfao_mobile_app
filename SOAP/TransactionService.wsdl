@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://soap.crmapi.util.redknee.com/transactions/Transactions-v1.2" xmlns:commonns="http://soap.crmapi.util.redknee.com/common/xsd/Common-v1.1" xmlns:transactiondtns="http://soap.crmapi.util.redknee.com/transactions/xsd/2010/11" xmlns:exns="http://soap.crmapi.util.redknee.com/common/exception/xsd/2008/08" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://soap.crmapi.util.redknee.com/transactions/Transactions-v1.2" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:transactionnsv1_1="http://soap.crmapi.util.redknee.com/transactions/xsd/Transactions-v1.1" xmlns:transactionnsv1_2="http://soap.crmapi.util.redknee.com/transactions/xsd/Transactions-v1.2">
+<wsdl:documentation>Transactions API 1.2 for CRMAPI Version 2.3 on November 11th, 2010</wsdl:documentation>
+  <wsdl:import namespace="http://soap.crmapi.util.redknee.com/common/exception/xsd/2008/08" location="TransactionService?wsdl=Common_faults_1_0.wsdl">
+    </wsdl:import>
+  <wsdl:import namespace="http://soap.crmapi.util.redknee.com/transactions/xsd/Transactions-v1.2" location="TransactionService?wsdl=Transactions_interface_1_2.wsdl">
+    </wsdl:import>
+  <wsdl:import namespace="http://soap.crmapi.util.redknee.com/common/xsd/Common-v1.1" location="TransactionService?wsdl=Common_interface_1_1.wsdl">
+    </wsdl:import>
+  <wsdl:import namespace="http://soap.crmapi.util.redknee.com/transactions/xsd/Transactions-v1.1" location="TransactionService?wsdl=Transactions_interface_1_1.wsdl">
+    </wsdl:import>
+  <wsdl:portType name="TransactionsPortType_v1_1">
+    <wsdl:operation name="getTransaction">
+      <wsdl:input message="transactionnsv1_1:getTransactionMessage" wsaw:Action="urn:getTransaction">
+    </wsdl:input>
+      <wsdl:output message="transactionnsv1_2:getTransactionResponse">
+    </wsdl:output>
+      <wsdl:fault name="CRMException" message="exns:CRMExceptionFault">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="createAccountTransaction">
+      <wsdl:input message="transactionnsv1_2:createAccountTransactionMessage" wsaw:Action="urn:createAccountTransaction">
+    </wsdl:input>
+      <wsdl:output message="transactionnsv1_1:createAccountTransactionResponse">
+    </wsdl:output>
+      <wsdl:fault name="CRMException" message="exns:CRMExceptionFault">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="createSubscriptionTransaction">
+      <wsdl:input message="transactionnsv1_2:createSubscriptionTransactionMessage" wsaw:Action="urn:createSubscriptionTransaction">
+    </wsdl:input>
+      <wsdl:output message="transactionnsv1_1:createSubscriptionTransactionResponse">
+    </wsdl:output>
+      <wsdl:fault name="CRMException" message="exns:CRMExceptionFault">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="listAccountTransactions">
+      <wsdl:input message="transactionnsv1_1:listAccountTransactionsMessage" wsaw:Action="urn:listAccountTransactions">
+    </wsdl:input>
+      <wsdl:output message="transactionnsv1_1:listAccountTransactionsResponse">
+    </wsdl:output>
+      <wsdl:fault name="CRMException" message="exns:CRMExceptionFault">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="listDetailedAccountTransactions">
+      <wsdl:input message="transactionnsv1_1:listDetailedAccountTransactionsMessage" wsaw:Action="urn:listDetailedAccountTransactions">
+    </wsdl:input>
+      <wsdl:output message="transactionnsv1_2:listDetailedAccountTransactionsResponse">
+    </wsdl:output>
+      <wsdl:fault name="CRMException" message="exns:CRMExceptionFault">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="listSubscriptionTransactions">
+      <wsdl:input message="transactionnsv1_1:listSubscriptionTransactionsMessage" wsaw:Action="urn:listSubscriptionTransactions">
+    </wsdl:input>
+      <wsdl:output message="transactionnsv1_1:listSubscriptionTransactionsResponse">
+    </wsdl:output>
+      <wsdl:fault name="CRMException" message="exns:CRMExceptionFault">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="listDetailedSubscriptionTransactions">
+      <wsdl:input message="transactionnsv1_1:listDetailedSubscriptionTransactionsMessage" wsaw:Action="urn:listDetailedSubscriptionTransactions">
+    </wsdl:input>
+      <wsdl:output message="transactionnsv1_2:listDetailedSubscriptionTransactionsResponse">
+    </wsdl:output>
+      <wsdl:fault name="CRMException" message="exns:CRMExceptionFault">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="listTransactionMethods">
+      <wsdl:input message="transactionnsv1_1:listTransactionMethodsMessage" wsaw:Action="urn:listTransactionMethods">
+    </wsdl:input>
+      <wsdl:output message="transactionnsv1_1:listTransactionMethodsResponse">
+    </wsdl:output>
+      <wsdl:fault name="CRMException" message="exns:CRMExceptionFault">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getAdjustmentType">
+      <wsdl:input message="transactionnsv1_1:getAdjustmentTypeMessage" wsaw:Action="urn:getAdjustmentType">
+    </wsdl:input>
+      <wsdl:output message="transactionnsv1_1:getAdjustmentTypeResponse">
+    </wsdl:output>
+      <wsdl:fault name="CRMException" message="exns:CRMExceptionFault">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="listAdjustmentTypes">
+      <wsdl:input message="transactionnsv1_1:listAdjustmentTypesMessage" wsaw:Action="urn:listAdjustmentTypes">
+    </wsdl:input>
+      <wsdl:output message="transactionnsv1_1:listAdjustmentTypesResponse">
+    </wsdl:output>
+      <wsdl:fault name="CRMException" message="exns:CRMExceptionFault">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="listGLCodes">
+      <wsdl:input message="transactionnsv1_1:listGLCodesMessage" wsaw:Action="urn:listGLCodes">
+    </wsdl:input>
+      <wsdl:output message="transactionnsv1_1:listGLCodesResponse">
+    </wsdl:output>
+      <wsdl:fault name="CRMException" message="exns:CRMExceptionFault">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="listPaymentAgents">
+      <wsdl:input message="transactionnsv1_1:listPaymentAgentsMessage" wsaw:Action="urn:listPaymentAgents">
+    </wsdl:input>
+      <wsdl:output message="transactionnsv1_1:listPaymentAgentsResponse">
+    </wsdl:output>
+      <wsdl:fault name="CRMException" message="exns:CRMExceptionFault">
+    </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Transactions_v1_1_SOAP11Binding" type="tns:TransactionsPortType_v1_1">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getTransaction">
+      <soap:operation soapAction="urn:getTransaction" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="CRMException">
+        <soap:fault name="CRMException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="createAccountTransaction">
+      <soap:operation soapAction="urn:createAccountTransaction" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="CRMException">
+        <soap:fault name="CRMException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="createSubscriptionTransaction">
+      <soap:operation soapAction="urn:createSubscriptionTransaction" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="CRMException">
+        <soap:fault name="CRMException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="listAccountTransactions">
+      <soap:operation soapAction="urn:listAccountTransactions" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="CRMException">
+        <soap:fault name="CRMException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="listDetailedAccountTransactions">
+      <soap:operation soapAction="urn:listDetailedAccountTransactions" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="CRMException">
+        <soap:fault name="CRMException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="listSubscriptionTransactions">
+      <soap:operation soapAction="urn:listSubscriptionTransactions" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="CRMException">
+        <soap:fault name="CRMException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="listDetailedSubscriptionTransactions">
+      <soap:operation soapAction="urn:listDetailedSubscriptionTransactions" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="CRMException">
+        <soap:fault name="CRMException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="listTransactionMethods">
+      <soap:operation soapAction="urn:listTransactionMethods" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="CRMException">
+        <soap:fault name="CRMException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getAdjustmentType">
+      <soap:operation soapAction="urn:getAdjustmentType" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="CRMException">
+        <soap:fault name="CRMException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="listAdjustmentTypes">
+      <soap:operation soapAction="urn:listAdjustmentTypes" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="CRMException">
+        <soap:fault name="CRMException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="listGLCodes">
+      <soap:operation soapAction="urn:listGLCodes" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="CRMException">
+        <soap:fault name="CRMException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="listPaymentAgents">
+      <soap:operation soapAction="urn:listPaymentAgents" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="CRMException">
+        <soap:fault name="CRMException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TransactionService">
+    <wsdl:port name="TransactionsSOAP11port_http" binding="tns:Transactions_v1_1_SOAP11Binding">
+      <soap:address location="http://0.0.0.0:8080/RedkneeSoap_v2_3/services/TransactionService/"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

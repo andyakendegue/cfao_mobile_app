@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="a7cfa19f-3a1e-4e0e-8d3a-304c9931ba9b" name="ilink-remote" url="http://ilink-app.com">
+        <fileTransfer host="ilink-app.com" port="21" password="dfc3dfc6dfc3dfc4dfc1dfcddfcbdfc8dfc5dfc4df98df9adf9bdf9cdfeddfeb" username="admin@ilink-app.com">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="22e94a93-53f6-4b87-b595-d8dc7a92dc93" name="cfao_remote" url="http://azur-wifly.com">
+        <fileTransfer host="azur-wifly.com" port="22" accessType="SFTP" password="dfcbdff0dffddfc3df98df9adf9bdf9cdfc9dfde" username="azur-wifly">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

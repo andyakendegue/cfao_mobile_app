@@ -32,15 +32,18 @@ $jour = date('Y-m-d');
 $heure = date('H:i:s.U');
 $time_stamp = $jour.'T'.$heure.'Z';
 
-$amount = $_GET['montant']*100;
-$phone = $_GET['phone'];
+$amount = 10000*100;
+$phone = '03244242';
 $debit = '25000';
 $credit = '21000';
+$transaction = $credit;
+/*
 if($_GET['transaction']=='debit') {
     $transaction = $debit;
 } else if ($_GET['transaction']=='credit'){
     $transaction = $credit;
 }
+*/
 
 
 
